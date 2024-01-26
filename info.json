@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "Catalina",
+        "email": "catalinaforerosuarez@gmail.com",
+        "phone": 1234567890,
+        "password": "PW12345678cf"
+    },
+    {
+        "id": 2,
+        "name": "Dylan",
+        "email": "dyaln@gmail.com",
+        "phone": 1234567890,
+        "password": "dylan123"
+    },
+    {
+        "id": 3,
+        "name": "Jesu",
+        "email": "jesu@gmail.com",
+        "phone": 1234567890,
+        "password": "jesu456"
+    }
+]
