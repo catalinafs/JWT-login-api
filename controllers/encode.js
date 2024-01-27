@@ -1,5 +1,6 @@
 const fs = require('fs');
 const jwt = require('jsonwebtoken');
+const bcrypt = require('bcrypt');
 
 const pathfile = './info.json';
 
@@ -14,7 +15,8 @@ fs.readFile(pathfile, 'utf8', (err, data) => {
 const EncodeData = (req, res) => {
     const { email, password } = req.body;
 
-    const userData = info.find((user) => { return user.email === email && user.password === password });
+    const userData = info.find((user) => { return user.email === email && bcrypt.compareSync(password, user.password) });
+    console.log(userData)
 
     if (!userData || userData === undefined) res.status(404).json({ msg: 'Usuario no encontrado' });
 

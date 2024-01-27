@@ -20,6 +20,8 @@ const DecodeData = (req, res) => {
 
     if (!userData || userData === undefined) res.status(401).json({ msg: 'Token erroneo' });
 
+    delete userData.password;
+
     res.status(200).json({ user: userData });
 }
 
