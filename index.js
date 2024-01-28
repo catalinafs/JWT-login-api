@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 
 // middlewares
 const { validRegister } = require('./middlewares/validRegister');
@@ -16,6 +17,7 @@ const app = express();
 const port = 8765;
 
 app.use(bodyParser.json());
+app.use(cors());
 
 // POST: register user
 app.post('/register', validRegister, RegisterUser);
